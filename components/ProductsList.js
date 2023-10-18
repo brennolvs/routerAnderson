@@ -15,9 +15,9 @@ const ProdutosScreen = ({ route }) => {
         keyExtractor={(item) => item.id.toString()}
         renderItem={({ item }) => (
           <View style={styles.itemContainer}>
-
+            <ImageBackground source={{ uri: item.image }} style={styles.image} />
             <View style={styles.produtoItem}>
-              <ImageBackground source={{ uri: item.image }} style={styles.image}/>
+
               <Text style={styles.produtoNome}>{item.nome}</Text>
               <Text style={styles.produtoDescricao}>Descrição: {item.descricao}</Text>
               <Text style={styles.produtoPreco}>Preço: R$ {item.preco.toFixed(2)}</Text>

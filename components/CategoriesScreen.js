@@ -6,7 +6,7 @@ import data from '../db.json';
 const CategoriasScreen = ({ navigation }) => {
   const categorias = data.categorias;
 
-  const handleCategoriaPress = (categoria) => {
+  const selecionaCategoria = (categoria) => {
     navigation.navigate('Produtos', { categoria });
   };
 
@@ -19,7 +19,7 @@ const CategoriasScreen = ({ navigation }) => {
         renderItem={({ item }) => (
           <TouchableOpacity
             style={styles.categoriaItem}
-            onPress={() => handleCategoriaPress(item)}
+            onPress={() => selecionaCategoria(item)}
           >
             <Text style={styles.categoriaText}>{item.nome}</Text>
           </TouchableOpacity>
